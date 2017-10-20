@@ -2,9 +2,9 @@
 
 namespace MayaSpecialtyFoods.Models
 {
-	public class AnimalSanctuaryContext : DbContext
+	public class MayaSpecialtyFoodsContext : DbContext
 	{
-		public AnimalSanctuaryContext()
+		public MayaSpecialtyFoodsContext()
 		{
 
 		}
@@ -14,10 +14,10 @@ namespace MayaSpecialtyFoods.Models
 
 		protected override void OnConfiguring(DbContextOptionsBuilder options)
 		{
-			options.UseMySql(@"Server=localhost;Port=3306;database=gummibearkingdomMigrations;uid=root;pwd=root;");
+			options.UseMySql(@"Server=localhost;Port=3306;database=mayaspecialtyfoodsmigrations;uid=root;pwd=root;");
 		}
 
-		public AnimalSanctuaryContext(DbContextOptions<AnimalSanctuaryContext> options)
+		public MayaSpecialtyFoodsContext(DbContextOptions<MayaSpecialtyFoodsContext> options)
 			: base(options)
 		{
 

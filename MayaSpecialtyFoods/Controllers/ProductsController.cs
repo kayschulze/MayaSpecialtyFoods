@@ -1,35 +1,75 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using MayaSpecialtyFoods.Models;
+
+// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace MayaSpecialtyFoods.Controllers
 {
-    public class HomeController : Controller
+    public class ProductsController : Controller
     {
+        private IProductRepository productRepo;
+
+        public ProductsController(IProductRepository thisRepo = null)
+        {
+            if (thisRepo == null)
+            {
+                this.productRepo = new EFProductRepository();
+            }
+            else
+            {
+                this.productRepo = thisRepo;
+            }
+        }
+
         public IActionResult Index()
         {
+            return View(productRepo.Products.ToList());
+        }
+
+        public IActionResult Details(int id)
+        {
+            var thisProduct = productRepo.Products.FirstOrDefault(x => x.ProductId == id);
+            return View(thisProduct);
+        }
+
+        public IActionResult Create()
+        {
             return View();
         }
 
-        public IActionResult About()
+        [HttpPost]
+        public IActionResult Create(Product product)
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
+            productRepo.Save(product);
+            return RedirectToAction("Index");
         }
 
-        public IActionResult Contact()
+        public IActionResult Edit(int id)
         {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
+            var thisProduct = productRepo.Products.FirstOrDefault(x => x.ProductId == id);
+            return View(thisProduct);
         }
 
-        public IActionResult Error()
+        [HttpPost]
+        public IActionResult Edit(Product product)
         {
-            return View();
+            productRepo.Edit(product);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Delete(int id)
+        {
+            var thisProduct = productRepo.Animals.FirstOrDefault(x => x.AnimalId == id);
+            return View(thisProduct);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            Product thisProduct = productRepo.Animals.FirstOrDefault(x => x.AnimalId == id);
+            productRepo.Remove(thisProduct);
+            return RedirectToAction("Index");
         }
     }
 }
