@@ -60,14 +60,14 @@ namespace MayaSpecialtyFoods.Controllers
 
         public ActionResult Delete(int id)
         {
-            var thisProduct = productRepo.Animals.FirstOrDefault(x => x.AnimalId == id);
+            var thisProduct = productRepo.Products.FirstOrDefault(x => x.ProductId == id);
             return View(thisProduct);
         }
 
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {
-            Product thisProduct = productRepo.Animals.FirstOrDefault(x => x.AnimalId == id);
+            Product thisProduct = productRepo.Products.FirstOrDefault(x => x.ProductId == id);
             productRepo.Remove(thisProduct);
             return RedirectToAction("Index");
         }

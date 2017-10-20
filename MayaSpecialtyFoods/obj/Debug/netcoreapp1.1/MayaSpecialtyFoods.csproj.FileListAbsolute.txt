@@ -5,3 +5,6 @@ C:\Users\kayob\Desktop\Epicodus\MayaSpecialtyFoods\MayaSpecialtyFoods\bin\Debug\
 C:\Users\kayob\Desktop\Epicodus\MayaSpecialtyFoods\MayaSpecialtyFoods\obj\Debug\netcoreapp1.1\MayaSpecialtyFoods.csprojResolveAssemblyReference.cache
 C:\Users\kayob\Desktop\Epicodus\MayaSpecialtyFoods\MayaSpecialtyFoods\obj\Debug\netcoreapp1.1\MayaSpecialtyFoods.csproj.CoreCompileInputs.cache
 C:\Users\kayob\Desktop\Epicodus\MayaSpecialtyFoods\MayaSpecialtyFoods\obj\Debug\netcoreapp1.1\MayaSpecialtyFoods.AssemblyInfo.cs
+C:\Users\kayob\Desktop\Epicodus\MayaSpecialtyFoods\MayaSpecialtyFoods\bin\Debug\netcoreapp1.1\MayaSpecialtyFoods.pdb
+C:\Users\kayob\Desktop\Epicodus\MayaSpecialtyFoods\MayaSpecialtyFoods\obj\Debug\netcoreapp1.1\MayaSpecialtyFoods.dll
+C:\Users\kayob\Desktop\Epicodus\MayaSpecialtyFoods\MayaSpecialtyFoods\obj\Debug\netcoreapp1.1\MayaSpecialtyFoods.pdb
