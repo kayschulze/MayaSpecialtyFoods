@@ -12,7 +12,10 @@ _The program uses .Net technologies to build a website that can act as an online
 
 * _Use an up-to-date browser._
 * _Requires SQL server.  This program runs MAMP._
+* _To Install NuGet Packages._
 
+Microsoft.EntityFrameworkCore - Version 1.1.2
+Pomelo.EntityFrameworkCore.MySql Version - 1.1.2
 
 ## Specifications
 | Behavior | Input | Output | Reasoning |
