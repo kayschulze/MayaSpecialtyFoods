@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MayaSpecialtyFoods.Models
 {
@@ -12,6 +13,6 @@ namespace MayaSpecialtyFoods.Models
         public string Content_Body { get; set; }
         public int Rating { get; set; }
         public int ProductId { get; set; }
-        public virtual Product ProductId { get; set; }
+        public virtual Product Product { get; set; }
     }
 }
