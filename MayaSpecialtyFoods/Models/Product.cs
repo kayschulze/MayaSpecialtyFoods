@@ -13,7 +13,7 @@ namespace MayaSpecialtyFoods.Models
         public string Name { get; set; }
         public double Cost { get; set; }
         public string Origincountry { get; set; }
-        //public virtual ICollection<Review> Reviews { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
 
         public Product(int productid, string name, double cost, string origincountry)
         {

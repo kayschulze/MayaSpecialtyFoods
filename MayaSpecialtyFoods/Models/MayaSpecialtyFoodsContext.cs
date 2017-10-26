@@ -14,7 +14,7 @@ namespace MayaSpecialtyFoods.Models
 
 		protected override void OnConfiguring(DbContextOptionsBuilder options)
 		{
-			options.UseMySql(@"Server=localhost;Port=3306;database=mayaspecialtyfoodsmigrations;uid=root;pwd=root;");
+			options.UseMySql(@"Server=localhost;Port=3306;database=mayaspecialtyfoodstest;uid=root;pwd=root;");
 		}
 
 		public MayaSpecialtyFoodsContext(DbContextOptions<MayaSpecialtyFoodsContext> options)

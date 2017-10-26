@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.1",
-    "signature": "2c2c884c7d35bc6096eeecbb707ab057ef018e76"
+    "signature": "096943c7611a9034f708860f208fc792923f336f"
   },
   "compilationOptions": {
     "defines": [
@@ -28,6 +28,7 @@
           "Microsoft.AspNetCore.Mvc": "1.1.2",
           "Microsoft.AspNetCore.StaticFiles": "1.1.2",
           "Microsoft.EntityFrameworkCore": "1.1.2",
+          "Microsoft.EntityFrameworkCore.Design": "1.1.2",
           "Microsoft.Extensions.Logging.Debug": "1.1.2",
           "Microsoft.NETCore.App": "1.1.2",
           "Microsoft.VisualStudio.Web.BrowserLink": "1.1.2",
@@ -784,7 +785,21 @@
           "lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll": {}
         }
       },
-      "microsoft.entityframeworkcore.relational/1.1.1": {
+      "microsoft.entityframeworkcore.design/1.1.2": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "1.1.2",
+          "Microsoft.EntityFrameworkCore.Relational.Design": "1.1.2",
+          "NETStandard.Library": "1.6.1",
+          "System.Collections.NonGeneric": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Design.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Design.dll": {}
+        }
+      },
+      "microsoft.entityframeworkcore.relational/1.1.2": {
         "dependencies": {
           "Microsoft.CSharp": "4.3.0",
           "Microsoft.EntityFrameworkCore": "1.1.2",
@@ -797,6 +812,18 @@
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        }
+      },
+      "microsoft.entityframeworkcore.relational.design/1.1.2": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.2",
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
         }
       },
       "microsoft.extensions.caching.abstractions/1.1.1": {
@@ -1272,7 +1299,7 @@
       },
       "pomelo.entityframeworkcore.mysql/1.1.2": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "1.1.1",
+          "Microsoft.EntityFrameworkCore.Relational": "1.1.2",
           "MySqlConnector": "0.19.2",
           "NETStandard.Library": "1.6.1",
           "Pomelo.JsonObject": "1.1.1",
@@ -3535,12 +3562,26 @@
       "path": "microsoft.entityframeworkcore/1.1.2",
       "hashPath": "microsoft.entityframeworkcore.1.1.2.nupkg.sha512"
     },
-    "microsoft.entityframeworkcore.relational/1.1.1": {
+    "microsoft.entityframeworkcore.design/1.1.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wIeIC02b3uFQ0Mgd5yDcpzbGQs383p2BAkpMjNz2xffo9QAFXO1CDavuolRk5I2Rv/iBy9igB91BZoY0tpcMzA==",
-      "path": "microsoft.entityframeworkcore.relational/1.1.1",
-      "hashPath": "microsoft.entityframeworkcore.relational.1.1.1.nupkg.sha512"
+      "sha512": "sha512-hkFZKsQztynPXN+yaEXAY3VvEwC5I9yK7KpafDeWANHN27sblZJoSjRSwHFqyRQfQ5t3EU5pOdILor/TSy3iWQ==",
+      "path": "microsoft.entityframeworkcore.design/1.1.2",
+      "hashPath": "microsoft.entityframeworkcore.design.1.1.2.nupkg.sha512"
+    },
+    "microsoft.entityframeworkcore.relational/1.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zeoD6K/PGvPIU3qKI3sWrEaFTUJT7D4CEy5MPso71Zd0k7exXJbmjA+Xz5DaalbaZBIbun77uq0uLQWUt3WXAw==",
+      "path": "microsoft.entityframeworkcore.relational/1.1.2",
+      "hashPath": "microsoft.entityframeworkcore.relational.1.1.2.nupkg.sha512"
+    },
+    "microsoft.entityframeworkcore.relational.design/1.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-j0efheIsPVDQQ3Olvb4COThj6NzLseiWGrkDjYCismLSOLGyiWus7LMrAwgmyUTV13hW+cm9vXDMopPpQ3gRXA==",
+      "path": "microsoft.entityframeworkcore.relational.design/1.1.2",
+      "hashPath": "microsoft.entityframeworkcore.relational.design.1.1.2.nupkg.sha512"
     },
     "microsoft.extensions.caching.abstractions/1.1.1": {
       "type": "package",

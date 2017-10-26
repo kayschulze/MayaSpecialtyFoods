@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using MayaSpecialtyFoods.Models;
 
 namespace MayaSpecialtyFoods
 {
@@ -29,6 +33,8 @@ namespace MayaSpecialtyFoods
         {
             // Add framework services.
             services.AddMvc();
+
+            services.AddDbContext<MayaSpecialtyFoodsContext>(options => options.UseMySql(@"Server=localhost;Port=3306;database=mayaspecialtyfoodstest;uid=root;pwd=root;"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
