@@ -10,27 +10,42 @@ namespace MayaSpecialtyFoods.Models
         [Key]
         public int ReviewId { get; set; }
         public string Author { get; set; }
-        public string Content_Body { get; set; }
+        public string ContentBody { get; set; }
         public int Rating { get; set; }
         public int ProductId { get; set; }
         public virtual Product Product { get; set; }
 
-        public override bool Equals(System.Object otherProduct)
+        public Review(int reviewid, string author, string contentbody, int rating, int productid)
         {
-            if (!(otherProduct is Product))
+            ReviewId = reviewid;
+            Author = author;
+            ContentBody = contentbody;
+            Rating = rating;
+            ProductId = productid;
+        }
+
+        public override bool Equals(System.Object otherReview)
+        {
+            if (!(otherReview is Review))
             {
                 return false;
             }
             else
             {
-                Product newProduct = (Product)otherProduct;
-                return this.ProductId.Equals(newProduct.ProductId);
+                Review newReview = (Review)otherReview;
+                bool idEquality = this.ReviewId == newReview.ReviewId;
+                bool authorEquality = this.Author == newReview.Author;
+                bool contentBodyEquality = this.ContentBody == newReview.ContentBody;
+                bool ratingEquality = this.Rating == newReview.Rating;
+                bool productIdEquality = this.ProductId == newReview.ProductId;
+
+                return (idEquality && authorEquality && contentBodyEquality && ratingEquality && productIdEquality);
             }
         }
 
         public override int GetHashCode()
         {
-            return this.ProductId.GetHashCode();
+            return this.ReviewId.GetHashCode();
         }
     }
 }
