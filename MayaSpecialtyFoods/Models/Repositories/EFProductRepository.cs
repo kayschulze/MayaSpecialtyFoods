@@ -7,6 +7,18 @@ namespace MayaSpecialtyFoods.Models
     {
         MayaSpecialtyFoodsContext db = new MayaSpecialtyFoodsContext();
 
+        public EFProductRepository(MayaSpecialtyFoodsContext connection = null)
+        {
+            if (connection == null)
+            {
+                this.db = new MayaSpecialtyFoodsContext();
+            }
+            else
+            {
+                this.db = connection;
+            }
+        }
+
         public IQueryable<Product> Products
         { get { return db.Products; } }
 

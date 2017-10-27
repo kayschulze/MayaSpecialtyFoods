@@ -12,6 +12,7 @@ namespace MayaSpecialtyFoods.Tests
     public class ProductsControllerTest
     {
         Mock<IProductRepository> mock = new Mock<IProductRepository>();
+        EFProductRepository db = new EFProductRepository(new TestDbContext());
 
         private void DbSetup()
         {

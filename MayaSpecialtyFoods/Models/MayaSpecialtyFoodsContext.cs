@@ -9,7 +9,7 @@ namespace MayaSpecialtyFoods.Models
 
 		}
 
-		public DbSet<Product> Products { get; set; }
+		public virtual DbSet<Product> Products { get; set; }
         public DbSet<Review> Reviews { get; set; }
 
 		protected override void OnConfiguring(DbContextOptionsBuilder options)
